@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "../ui/badge";
 import { ArrowRightIcon } from "lucide-react";
 import RetroGrid from "../ui/retro-grid";
+import { Icons } from "../Navbar/icons";
 export const Weblink = ({ children, link }: any) => {
   return (
     <span onClick={() => window.open(link, '_blank')} className={'hover:cursor-pointer hover:underline dark:text-white  font-bold'}>
@@ -20,7 +21,7 @@ export const Weblink = ({ children, link }: any) => {
 export default function Hero() {
   return (
     <PageHeader>
-      <Badge>🎉 Introducing Next Blocks <ArrowRightIcon className="ml-1 h-3 w-3" /></Badge>
+      <Badge> <Icons.logo className="h-[14px] w-[14px] mr-1" /> Introducing Next Blocks <ArrowRightIcon className="ml-1 h-3 w-3" /></Badge>
       <PageHeaderHeading className="md:block hidden">
         Transform your  <br />Applications with Next Blocks
       </PageHeaderHeading>
