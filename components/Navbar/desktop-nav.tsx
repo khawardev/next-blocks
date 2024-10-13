@@ -10,6 +10,7 @@ import { Badge } from "@/components/ui/badge";
 import { CommandMenu } from "./command-menu";
 import { Button } from "../ui/button";
 import { ModeToggle } from "./ModeToggle";
+import { ThemeSwitcher } from "@/components/ui/theme-switcher";
 
 export function DesktopNav() {
   const pathname = usePathname();
@@ -64,7 +65,7 @@ export function DesktopNav() {
               <Icons.gitHub className="h-4 w-4" />
             </Button>
           </Link>
-          <ModeToggle />
+          <ThemeSwitcher />
         </nav>
       </div>
     </div>

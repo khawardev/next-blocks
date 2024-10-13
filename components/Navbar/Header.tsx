@@ -8,6 +8,7 @@ import { DesktopNav } from "@/components/Navbar/desktop-nav";
 import { MobileNav } from "@/components/Navbar/mobile-nav";
 import { Button } from "@/components/ui/button";
 import { ModeToggle } from "./ModeToggle";
+import { ThemeSwitcher } from "@/components/ui/theme-switcher";
 
 export function Header() {
   return (
@@ -25,7 +26,9 @@ export function Header() {
                 <Icons.gitHub className="h-4 w-4" />
               </Button>
             </Link>
-            <ModeToggle />
+            {/* <ModeToggle /> */}
+            <ThemeSwitcher />
+
           </nav>
         </div>
       </div>
