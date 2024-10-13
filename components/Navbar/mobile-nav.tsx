@@ -63,7 +63,7 @@ export function MobileNav() {
                           <MobileLink
                             href={item.href}
                             onOpenChange={setOpen}
-                            className="text-muted-foreground"
+                            className="text-muted-foreground flex items-center"
                           >
                             {item.title}
                             {item.label && (

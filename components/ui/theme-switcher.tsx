@@ -26,7 +26,7 @@ const ThemeSwitcher = React.forwardRef<
             ref={ref}
             {...rest}
             className={cn(
-                "border-border focus-visible:ring-offset-background focus-visible:ring-ring relative flex size-8 items-center justify-center overflow-hidden rounded-lg border p-2 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2",
+                " hover:bg-accent hover:text-accent-foreground  relative flex size-8 items-center justify-center overflow-hidden rounded-lg  p-2 transition-colors ",
                 className,
             )}
             onClick={toggleTheme}

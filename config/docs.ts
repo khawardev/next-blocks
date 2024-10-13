@@ -21,7 +21,37 @@ export const docsConfig: DocsConfig = {
       title: "Catgegories",
       items: [
         {
-          title: "Introduction",
+          title: "Hero",
+          href: "/docs",
+          items: [],
+          label: "New",
+        },
+        {
+          title: "Features",
+          href: "/docs",
+          items: [],
+          label: "New",
+        },
+        {
+          title: "Footer",
+          href: "/docs",
+          items: [],
+          label: "New",
+        },
+        {
+          title: "Headers",
+          href: "/docs",
+          items: [],
+          label: "New",
+        },
+        {
+          title: "Careers",
+          href: "/docs",
+          items: [],
+          label: "New",
+        },
+        {
+          title: "Blogs",
           href: "/docs",
           items: [],
           label: "New",
