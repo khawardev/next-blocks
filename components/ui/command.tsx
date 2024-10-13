@@ -25,7 +25,7 @@ Command.displayName = CommandPrimitive.displayName
 
 interface CommandDialogProps extends DialogProps { }
 
-const CommandDialog = ({ className, children, ...props }: CommandDialogProps) => {
+const CommandDialog = ({ children, ...props }: CommandDialogProps) => {
   return (
     <Dialog {...props} >
       <DialogContent className="overflow-hidden p-0 shadow-lg ">
