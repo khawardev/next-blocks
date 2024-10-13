@@ -1,8 +1,8 @@
 "use client";
-
 import * as React from "react";
 import { useRouter } from "next/navigation";
-import { DialogProps } from "@radix-ui/react-alert-dialog";
+import { AlertDialogProps } from "@radix-ui/react-alert-dialog";
+
 import {
   CircleIcon,
   FileIcon,
@@ -10,6 +10,7 @@ import {
   MoonIcon,
   SunIcon,
 } from "@radix-ui/react-icons";
+
 import { useTheme } from "next-themes";
 
 import { docsConfig } from "@/config/docs";
@@ -25,7 +26,7 @@ import {
   CommandSeparator,
 } from "@/components/ui/command";
 
-export function CommandMenu({ ...props }: DialogProps) {
+export function CommandMenu({ ...props }: AlertDialogProps) {
   const router = useRouter();
   const [open, setOpen] = React.useState(false);
   const { setTheme } = useTheme();
