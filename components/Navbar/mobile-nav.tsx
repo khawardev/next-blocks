@@ -3,10 +3,10 @@
 import * as React from "react";
 import Link, { LinkProps } from "next/link";
 import { useRouter } from "next/navigation";
-import { docsConfig } from "@/config/docs";
+import { blocksConfig } from "@/config/blocks";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
-import { Icons } from "@/components/Navbar/icons";
+import { Icons } from "@/components/navbar/icons";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -38,7 +38,7 @@ export function MobileNav() {
         </MobileLink>
         <ScrollArea className="my-4 h-[calc(100vh-8rem)] pb-10 pl-6">
           <div className="flex flex-col space-y-2 pb-3">
-            {docsConfig.mainNav?.map(
+            {blocksConfig.mainNav?.map(
               (item) =>
                 item.href && (
                   <MobileLink
@@ -52,7 +52,7 @@ export function MobileNav() {
             )}
           </div>
           <div className="flex flex-col space-y-2">
-            {docsConfig.sidebarNav.map((item, index) => (
+            {blocksConfig.sidebarNav.map((item, index) => (
               <div key={index} className="flex flex-col space-y-2 pt-3">
                 <h4 className="font-medium">{item.title}</h4>
                 {item?.items?.length &&

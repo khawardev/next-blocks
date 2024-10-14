@@ -1,26 +1,17 @@
 "use client";
-
 import * as React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
-import { Icons } from "@/components/Navbar/icons";
-import { Badge } from "@/components/ui/badge";
-import { CommandMenu } from "./command-menu";
+import { Icons } from "@/components/navbar/icons";
 import { Button } from "../ui/button";
-import { ModeToggle } from "./ModeToggle";
 import { ThemeSwitcher } from "@/components/ui/theme-switcher";
-
 import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
   NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu"
-import { docsConfig } from "@/config/docs";
+import HeaderNavigationMenu from "./nav-menu";
+import { CommandMenu } from "./command-menu";
 
 export function DesktopNav() {
   const pathname = usePathname();
@@ -37,39 +28,17 @@ export function DesktopNav() {
           href="/all-blocks"
           className={cn(
             "transition-colors hover:text-foreground/80",
-            pathname === "/docs" ? "text-foreground" : "text-foreground/60"
+            pathname === "/all-blocks" ? "text-foreground" : "text-foreground/60"
           )}
         >
           All Blocks
         </Link>
-
-        <NavigationMenu>
-          <NavigationMenuList>
-            <NavigationMenuItem>
-              <NavigationMenuTrigger className="hover:text-foreground/80 text-foreground/60" >Categories</NavigationMenuTrigger>
-              <NavigationMenuContent>
-                {docsConfig.sidebarNav.map((item, index: any) => (
-                  <ul key={index} className="grid grid-cols-2 gap-2 p-3  md:w-[300px] lg:w-[400px] ">
-                    {item?.items?.length && item.items.map((item, index) => (
-                      <div key={item.href}>
-                        {!item.disabled &&
-                          (item.href &&
-                            <ListItem index={index} href={item.href} title={item.title} />
-                          )}
-                      </div>
-                    ))}
-                  </ul>
-                ))}
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-          </NavigationMenuList>
-        </NavigationMenu>
-
+        <HeaderNavigationMenu />
         <Link
           href="/changelog"
           className={cn(
             "transition-colors hover:text-foreground/80",
-            pathname?.startsWith("/themes")
+            pathname?.startsWith("/changelog")
               ? "text-foreground"
               : "text-foreground/60"
           )}
@@ -95,28 +64,32 @@ export function DesktopNav() {
 }
 
 
-
-
 const ListItem = React.forwardRef<
-  React.ElementRef<"a">,
-  React.ComponentPropsWithRef<"a"> & { index: number; title: string }
->(({ className, title, index, children, ...props }, ref) => {
-  return (
-    <li>
-      <NavigationMenuLink asChild>
-        <a
-          ref={ref}
-          className={cn(
-            "flex  gap-2 select-none space-y-1  rounded-lg py-3 px-2 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-            className
-          )}
-          {...props}
-        >
+  HTMLAnchorElement,
+  React.ComponentPropsWithRef<"a"> & { index: number; title: string, href: string }
+>(({ className, title, href, index, children, ...props }, ref) => {
 
-          <div className="text-sm font-medium leading-none">  <div className="text-xs " >{index + 1}</div>{title}</div>
-        </a>
-      </NavigationMenuLink>
-    </li>
+  return (
+    <NavigationMenuLink>
+      <Link
+        href={href}
+        ref={ref}
+        className={cn(
+          "flex select-none rounded-lg p-[11px] leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+          className
+        )}
+        {...props}
+      >
+        <span className="text-sm font-medium leading-none flex-center gap-2">
+          <span className="text-xs px-1 text-black flex-center bg-[#adfa1d] font-bold hover:bg-[#adfa1d]/80 rounded-full">
+            {index + 1}
+          </span>
+          {title}
+        </span>
+      </Link>
+    </NavigationMenuLink>
   )
 })
 ListItem.displayName = "ListItem"
+
+export default ListItem;

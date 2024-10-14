@@ -5,15 +5,15 @@ interface DocsConfig {
   sidebarNav: SidebarNavItem[];
 }
 
-export const docsConfig: DocsConfig = {
+export const blocksConfig: DocsConfig = {
   mainNav: [
     {
       title: "All Blocks",
-      href: "/docs",
+      href: "/all-blocks",
     },
     {
       title: "Changelog",
-      href: "/docs",
+      href: "/changelog",
     },
   ],
   sidebarNav: [
@@ -22,37 +22,37 @@ export const docsConfig: DocsConfig = {
       items: [
         {
           title: "Hero",
-          href: "/docs",
+          href: "/hero",
           items: [],
           label: "New",
         },
         {
-          title: "Features",
-          href: "/docs",
+          title: "Feature",
+          href: "/feature",
           items: [],
           label: "New",
         },
         {
           title: "Footer",
-          href: "/docs",
+          href: "/footer",
           items: [],
           label: "New",
         },
         {
-          title: "Headers",
-          href: "/docs",
+          title: "Header",
+          href: "/header",
           items: [],
           label: "New",
         },
         {
-          title: "Careers",
-          href: "/docs",
+          title: "Career",
+          href: "/career",
           items: [],
           label: "New",
         },
         {
-          title: "Blogs",
-          href: "/docs",
+          title: "Blog",
+          href: "/blog",
           items: [],
           label: "New",
         },

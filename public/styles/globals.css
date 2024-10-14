@@ -10,6 +10,23 @@
   body {
     @apply bg-background text-foreground;
   }
+  .opacity-layer-2 {
+    background-color: #f6f4f1;
+    opacity: 0.9;
+    position: relative;
+  }
+  .opacity-layer {
+    width: 100%;
+    height: 20%;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      hsl(var(--background)) 100%
+    );
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
 }
 
 @layer base {
@@ -43,6 +60,8 @@
     --ring: 222.2 84% 4.9%;
 
     --radius: 0.5rem;
+
+    --scrollbar: #94d61a;
   }
 
   .dark {
@@ -73,6 +92,7 @@
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
+    --scrollbar: #94d61a;
   }
 }
 

@@ -1,16 +1,10 @@
 import React from "react";
-import {
-  PageActions,
-  PageHeader,
-  PageHeaderDescription,
-  PageHeaderHeading,
-} from "./page-header";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Badge } from "../ui/badge";
+import { Badge } from "../../ui/badge";
 import { ArrowRightIcon } from "lucide-react";
-import RetroGrid from "../ui/retro-grid";
-import { Icons } from "../Navbar/icons";
+import { Icons } from "../../navbar/icons";
+import { PageActions, PageHeader, PageHeaderDescription, PageHeaderHeading } from "./page-header";
 export const Weblink = ({ children, link }: any) => {
   return (
     <span onClick={() => window.open(link, '_blank')} className={'hover:cursor-pointer hover:underline dark:text-white  font-bold'}>
@@ -29,7 +23,7 @@ export default function Hero() {
         Transform your <br /> Apps with Next Blocks
       </PageHeaderHeading>
       <PageHeaderDescription >
-        Discover high-quality UI components built with <Weblink link={'https://nextjs.org/'}> Next.js</Weblink>, <Weblink link={'https://tailwindcss.com/'}> Tailwindcss </Weblink> and <Weblink link={'https://ui.shadcn.com/'}>shadcn ui</Weblink>. Easy copy and paste components to elevate your site!
+        Discover high-quality UI components built with <Weblink link={'https://nextjs.org/'}> Next.js</Weblink>, <Weblink link={'https://tailwindcss.com/'}> Tailwindcss </Weblink> and <Weblink link={'https://ui.shadcn.com/'}>shadcn ui</Weblink>. Easy copy and paste components to elevate your Apps!
       </PageHeaderDescription>
       <PageActions>
         <Link href="/docs" >

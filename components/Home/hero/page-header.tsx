@@ -9,7 +9,7 @@ function PageHeader({
   return (
     <section
       className={cn(
-        "mx-auto  flex md:py-48 py-36  space-y-4  text-center   flex-col items-center ",
+        "container-c md:py-48 py-36     flex-center  space-y-4  text-center   flex-col  ",
         className
       )}
       {...props}
@@ -41,7 +41,7 @@ function PageHeaderDescription({
   return (
     <Balance
       className={cn(
-        "max-w-[1000px]  text-lg text-muted-foreground sm:text-xl",
+        "max-w-[1200px]  text-base text-muted-foreground sm:text-lg",
         className
       )}
       {...props}
