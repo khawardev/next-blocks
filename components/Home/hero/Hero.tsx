@@ -3,8 +3,8 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Badge } from "../../ui/badge";
 import { ArrowRightIcon } from "lucide-react";
-import { Icons } from "../../navbar/icons";
 import { PageActions, PageHeader, PageHeaderDescription, PageHeaderHeading } from "./page-header";
+import { Icons } from "@/components/navbar/icons";
 export const Weblink = ({ children, link }: any) => {
   return (
     <span onClick={() => window.open(link, '_blank')} className={'hover:cursor-pointer hover:underline dark:text-white  font-bold'}>
