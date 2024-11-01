@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import { blocksConfig } from "@/config/blocks";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
-import { Icons } from "@/components/navbar/icons";
+import { Icons } from "@/components/Navbar/icons";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";

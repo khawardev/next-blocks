@@ -2,10 +2,10 @@
 
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
-import { CommandMenu } from "@/components/navbar/command-menu";
-import { Icons } from "@/components/navbar/icons";
-import { DesktopNav } from "@/components/navbar/desktop-nav";
-import { MobileNav } from "@/components/navbar/mobile-nav";
+import { CommandMenu } from "@/components/Navbar/command-menu";
+import { Icons } from "@/components/Navbar/icons";
+import { DesktopNav } from "@/components/Navbar/desktop-nav";
+import { MobileNav } from "@/components/Navbar/mobile-nav";
 import { Button } from "@/components/ui/button";
 import { ModeToggle } from "./ModeToggle";
 import { ThemeSwitcher } from "@/components/ui/theme-switcher";

@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
-import { Icons } from "@/components/navbar/icons";
+import { Icons } from "@/components/Navbar/icons";
 import { Button } from "../ui/button";
 import { ThemeSwitcher } from "@/components/ui/theme-switcher";
 import {
@@ -75,7 +75,7 @@ const ListItem = React.forwardRef<
         href={href}
         ref={ref}
         className={cn(
-          "flex select-none rounded-lg p-[11px] leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+          "flex select-none rounded-md p-[11px] leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
           className
         )}
         {...props}

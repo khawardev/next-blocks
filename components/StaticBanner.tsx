@@ -1,4 +1,4 @@
-import { PageHeaderDescription } from "./Home/hero/page-header"
+import { PageHeaderDescription } from "./Home/page-header"
 import { Badge } from "./ui/badge"
 
 const StaticBanner = ({ title, badge }: { title: string, badge: string }) => {

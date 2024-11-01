@@ -87,7 +87,7 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(var(--background));
+  background: hsl(var(--foreground));
 }
 
 ::-webkit-scrollbar-corner {
