@@ -24,7 +24,7 @@ export default function Hero() {
         Transform your <br /> Apps with Next Blocks
       </PageHeaderHeading>
       <PageHeaderDescription >
-        Discover high-quality UI components built with <Weblink link={'https://nextjs.org/'}> Next.js</Weblink>, <Weblink link={'https://tailwindcss.com/'}> Tailwindcss </Weblink> and <Weblink link={'https://ui.shadcn.com/'}>shadcn ui</Weblink>. Easy copy and paste components to elevate your Apps!
+        Discover high-quality UI components built with <Weblink link={'https://nextjs.org/'}> Next.js</Weblink>, <Weblink link={'https://tailwindcss.com/'}> Tailwindcss </Weblink> and <Weblink link={'https://ui.shadcn.com/'}>shadcn ui</Weblink>. <br /> Easy copy and paste components to elevate your Apps!
       </PageHeaderDescription>
       <PageActions>
         <Link href="/docs" >
