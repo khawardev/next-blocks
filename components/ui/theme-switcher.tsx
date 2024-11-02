@@ -32,9 +32,13 @@ const ThemeSwitcher = React.forwardRef<
             onClick={toggleTheme}
         >
             <motion.span
-                className="absolute left-1/2"
+                style={{
+                    position: "absolute",
+                    left: "50%",
+                    transform: "translate(-50%, -190%)", // This can serve as the initial transform
+                }}
                 initial={{
-                    transform: "translate(-50%, 150%)",
+                    transform: "translate(-50%, 190%)",
                 }}
                 animate={{
                     ...(theme === "dark"
@@ -45,17 +49,17 @@ const ThemeSwitcher = React.forwardRef<
                 <SunIcon className="size-4" />
             </motion.span>
             <motion.span
-                className="absolute left-1/2"
-                initial={{
-                    transform: "translate(-50%, -150%)",
+                style={{
+                    position: "absolute",
+                    left: "50%",
+                    transform: "translate(-50%, -190%)", // This can serve as the initial transform
                 }}
+                initial={{ transform: "translate(-50%, -190%)" }}
                 animate={{
-                    ...(theme === "dark"
-                        ? { transform: "translate(-50%, 0%)" }
-                        : { transform: "translate(-50%, -150%)" }),
+                    transform: theme === "dark" ? "translate(-50%, 0%)" : "translate(-50%, -150%)",
                 }}
             >
-                <MoonIcon className="size-4" />
+                <MoonIcon style={{ fontSize: "1rem" }} /> {/* equivalent to "size-4" */}
             </motion.span>
         </button>
     );
