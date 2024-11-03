@@ -4,7 +4,7 @@ import { ArrowRightIcon } from "lucide-react";
 import { Icons } from "@/components/Navbar/icons";
 import { Badge } from "../ui/badge";
 import { PageActions, PageHeader, PageHeaderDescription, PageHeaderHeading } from "./page-header";
-import { Link } from 'next-view-transitions'
+import Link from 'next/link'
 import { Blur, BlurDelay, BlurDelay2, BlurDelay3 } from "../Blur";
 
 export const Weblink = ({ children, link }: any) => {

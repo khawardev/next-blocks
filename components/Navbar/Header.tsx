@@ -1,5 +1,5 @@
 "use client";
-import { Link } from 'next-view-transitions'
+import Link from 'next/link'
 import { siteConfig } from "@/config/site";
 import { CommandMenu } from "@/components/Navbar/command-menu";
 import { Icons } from "@/components/Navbar/icons";
@@ -11,7 +11,7 @@ import Blur from '../Blur';
 export function Header() {
   return (
     <Blur className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className=" flex h-14 container md:px-0 px-4 items-center">
+      <div className=" flex h-16 container md:px-0 px-4 items-center">
         <DesktopNav />
         <MobileNav />
         <div className="md:hidden flex flex-1 items-center justify-between space-x-2 md:justify-end">

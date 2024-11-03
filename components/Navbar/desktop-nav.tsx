@@ -12,7 +12,7 @@ import {
 import HeaderNavigationMenu from "./nav-menu";
 import { CommandMenu } from "./command-menu";
 import { LayoutTemplate } from "lucide-react";
-import { Link } from 'next-view-transitions'
+import Link from 'next/link'
 export function DesktopNav() {
   const pathname = usePathname();
   return (

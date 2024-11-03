@@ -4,10 +4,10 @@ import Image from 'next/image'
 import { Badge } from '../ui/badge'
 import { ArrowUpRight } from 'lucide-react'
 import { Button } from '../ui/button'
-import { Link } from 'next-view-transitions'
 import { BlockCopyCodeButton } from '../BlockCopyCodeButton'
 import { AllBlocksProps } from '@/types/allBlocksTypes';
 import BlurFade from '../ui/blur-fade'
+import Link from 'next/link'
 const blur_fade = 0.4;
 export const AllBlocks = ({ comp, more, className, AllBlocksData }: AllBlocksProps) => {
     return (
