@@ -14,10 +14,7 @@ type MarginType = UseInViewOptions["margin"];
 interface BlurFadeProps {
   children: React.ReactNode;
   className?: string;
-  variant?: {
-    hidden: { y: number };
-    visible: { y: number };
-  };
+  variant?: { hidden: { y: number }; visible: { y: number }; };
   duration?: number;
   delay?: number;
   yOffset?: number;
@@ -37,7 +34,7 @@ export default function BlurFade({
   inViewMargin = "-50px",
   blur = "6px",
 }: BlurFadeProps) {
-  const ref = useRef(null);
+  const ref = useRef<any>(null);
   const inViewResult = useInView(ref, { once: true, margin: inViewMargin });
   const isInView = !inView || inViewResult;
   const defaultVariants: Variants = {
@@ -58,7 +55,7 @@ export default function BlurFade({
           duration,
           ease: "easeOut",
         }}
-        className={className}
+      // className={className}
       >
         {children}
       </motion.div>
