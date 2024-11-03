@@ -45,6 +45,7 @@ export default function BlurFade({
   return (
     <AnimatePresence>
       <motion.div
+        {...(className && { className })}
         ref={ref}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
@@ -55,7 +56,6 @@ export default function BlurFade({
           duration,
           ease: "easeOut",
         }}
-      // className={className}
       >
         {children}
       </motion.div>

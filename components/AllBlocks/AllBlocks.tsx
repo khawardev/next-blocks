@@ -15,13 +15,9 @@ export const AllBlocks = ({ comp, more, className, AllBlocksData }: AllBlocksPro
             {comp &&
                 <section className=' flex-between'>
                     <h2 className=' font-extrabold'>{comp}</h2>
-                    <Link href={'/all-blocks'}><Badge variant={'label'}>{more} <ArrowUpRight className='ml-1' size={13} /></Badge></Link>
+                    <Link href={'/all-blocks'}><Badge className=' px-1.5' variant={'label'}>{more} <ArrowUpRight className='ml-1' size={13} /></Badge></Link>
                 </section>
             }
-            {/* <section className=' flex-between'>
-                <h2 className=' font-extrabold'>{comp}</h2>
-                <Link href={'/all-blocks'}><Badge variant={'label'}>{more} <ArrowUpRight className='ml-1' size={13} /></Badge></Link>
-            </section> */}
 
             <section className={className}>
                 {AllBlocksData?.map((block, index) => (
@@ -33,19 +29,20 @@ export const AllBlocks = ({ comp, more, className, AllBlocksData }: AllBlocksPro
                     </div>
                 ))}
             </section>
-            <section className='flex-between gap-32'>
+
+            <section className='md-flex-between space-y8  gap-32'>
                 <div className=' space-y-5'>
-                    <Badge variant={'label'}>New Release</Badge>
-                    <h1 className=' font-extrabold'>Welcome to Our Website</h1>
-                    <p className=' text-muted-foreground'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Elig doloremque mollitia fugiat omnis! Porro facilis quo animi consequatur. Explicabo.</p>
+                    {/* <Badge className=' px-2' variant={'label'}>New Release</Badge> */}
+                    <h1 className=' font-bold'>Next Blocks</h1>
+                    <h5 className=' text-muted-foreground'>Discover high-quality UI components built with Next.js, Tailwindcss and shadcn ui.
+                        Easy copy and paste components to elevate your Apps!</h5>
                     <div className=' flex items-center gap-3'>
                         <Button>Hello 1</Button>
-                        <Button variant={'outline'}>Hello 1</Button>
+                        <Button variant={'outline'}>Hello 2</Button>
                     </div>
                 </div>
-                <Image height={1000} className='md:w-1/3 w-full' width={1000} src={'https://res.cloudinary.com/denajbnh4/image/upload/v1729011280/Next%20Blocks/ldmflnaug8fsdduzpbug.svg'} alt={'name'} />
+                <Image height={1000} className='md:w-1/4  object-cover rounded-lg w-full' width={1000} src={'https://res.cloudinary.com/denajbnh4/image/upload/v1729011280/Next%20Blocks/ldmflnaug8fsdduzpbug.svg'} alt={'name'} />
             </section>
-
 
         </main>
     )

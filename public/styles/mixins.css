@@ -18,7 +18,6 @@
 .container-flex {
   @apply container md:px-0 px-4 space-y10   md:py-32 py-10;
 }
-
 .flex-center {
   @apply flex justify-center items-center;
 }

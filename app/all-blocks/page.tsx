@@ -8,9 +8,7 @@ const page = () => {
     return (
         <div className=' container-c '>
             <StaticBanner title="All UI Components" badge={'All Blocks'} />
-
             <AllBlocks AllBlocksData={AllBlocksData} className={'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'} />
-
         </div>
     )
 }

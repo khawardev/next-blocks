@@ -19,5 +19,25 @@
     },
     "code": "<section className='flex-between gap-32'><div className='space-y-5'><Badge variant='label'>New Release</Badge><h1 className='font-extrabold'>Welcome to Our Website</h1><p className='text-muted-foreground'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Elig doloremque mollitia fugiat omnis! Porro facilis quo animi consequatur. Explicabo.</p><div className='flex items-center gap-3'><Button>Hello 1</Button><Button variant='outline'>Hello 1</Button></div></div><Image height='1000' className='md:w-1/3 w-full' width='1000' src='https://res.cloudinary.com/denajbnh4/image/upload/v1729011280/Next%20Blocks/ldmflnaug8fsdduzpbug.svg' alt='name' /></section>",
     "image": "https://res.cloudinary.com/denajbnh4/image/upload/v1728897229/Next%20Blocks/zuvaminvhqqrawhm0khi.jpg"
+  },
+  {
+    "name": "dashboard-03",
+    "category": "Application",
+    "container": {
+      "height": "730px",
+      "className": "w-full h-full"
+    },
+    "code": "<section className='flex-between gap-32'><div className='space-y-5'><Badge variant='label'>New Release</Badge><h1 className='font-extrabold'>Welcome to Our Website</h1><p className='text-muted-foreground'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Elig doloremque mollitia fugiat omnis! Porro facilis quo animi consequatur. Explicabo.</p><div className='flex items-center gap-3'><Button>Hello 1</Button><Button variant='outline'>Hello 1</Button></div></div><Image height='1000' className='md:w-1/3 w-full' width='1000' src='https://res.cloudinary.com/denajbnh4/image/upload/v1729011280/Next%20Blocks/ldmflnaug8fsdduzpbug.svg' alt='name' /></section>",
+    "image": "https://res.cloudinary.com/denajbnh4/image/upload/v1728897229/Next%20Blocks/zuvaminvhqqrawhm0khi.jpg"
+  },
+  {
+    "name": "dashboard-04",
+    "category": "Application",
+    "container": {
+      "height": "730px",
+      "className": "w-full h-full"
+    },
+    "code": "<section className='flex-between gap-32'><div className='space-y-5'><Badge variant='label'>New Release</Badge><h1 className='font-extrabold'>Welcome to Our Website</h1><p className='text-muted-foreground'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Elig doloremque mollitia fugiat omnis! Porro facilis quo animi consequatur. Explicabo.</p><div className='flex items-center gap-3'><Button>Hello 1</Button><Button variant='outline'>Hello 1</Button></div></div><Image height='1000' className='md:w-1/3 w-full' width='1000' src='https://res.cloudinary.com/denajbnh4/image/upload/v1729011280/Next%20Blocks/ldmflnaug8fsdduzpbug.svg' alt='name' /></section>",
+    "image": "https://res.cloudinary.com/denajbnh4/image/upload/v1728897229/Next%20Blocks/zuvaminvhqqrawhm0khi.jpg"
   }
 ]
