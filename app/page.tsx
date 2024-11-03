@@ -13,9 +13,7 @@ export default function Home() {
         <Hero />
         <div className="opacity-layer"></div>
       </section>
-      <section>
-        <AllBlocks AllBlocksData={AllBlocksData} className={'grid grid-cols-1 md:grid-cols-2 gap-8'} comp={'New Components'} more={'more'} />
-      </section>
+      <AllBlocks AllBlocksData={AllBlocksData} className={'grid grid-cols-1 md:grid-cols-2 gap-8'} comp={'New Components'} more={'more'} />
     </main>
   );
 }

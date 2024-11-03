@@ -13,6 +13,7 @@ import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from "./ui/resiz
 import { Icons } from "./Navbar/icons"
 import { BlockCopyCodeButton } from "./BlockCopyCodeButton"
 import { ToggleGroup, ToggleGroupItem } from "./ui/toggle-group"
+import Link from "next/link"
 
 interface Block {
   name: string;
@@ -54,9 +55,9 @@ export function BlockPreview({ block }: { block: Block }) {
               className="mx-2 hidden h-4 md:flex"
             />
             <div className="flex items-center gap-2">
-              <a href={`#${block.name}`}>
+              <Link href={`#${block.name}`}>
                 <Badge variant="outline">{block.name}</Badge>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

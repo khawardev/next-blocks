@@ -4,10 +4,11 @@ import Image from 'next/image'
 import { Badge } from '../ui/badge'
 import { ArrowUpRight } from 'lucide-react'
 import { Button } from '../ui/button'
-import Link from 'next/link'
+import { Link } from 'next-view-transitions'
 import { BlockCopyCodeButton } from '../BlockCopyCodeButton'
 import { AllBlocksProps } from '@/types/allBlocksTypes';
-
+import BlurFade from '../ui/blur-fade'
+const blur_fade = 0.4;
 export const AllBlocks = ({ comp, more, className, AllBlocksData }: AllBlocksProps) => {
     return (
         <main className='container-col '>
@@ -17,6 +18,10 @@ export const AllBlocks = ({ comp, more, className, AllBlocksData }: AllBlocksPro
                     <Link href={'/all-blocks'}><Badge variant={'label'}>{more} <ArrowUpRight className='ml-1' size={13} /></Badge></Link>
                 </section>
             }
+            {/* <section className=' flex-between'>
+                <h2 className=' font-extrabold'>{comp}</h2>
+                <Link href={'/all-blocks'}><Badge variant={'label'}>{more} <ArrowUpRight className='ml-1' size={13} /></Badge></Link>
+            </section> */}
 
             <section className={className}>
                 {AllBlocksData?.map((block, index) => (

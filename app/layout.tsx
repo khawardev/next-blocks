@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import Providers from "@/components/ProgressBarProvider";
 import { Header } from "@/components/Navbar/Header";
 const inter = Inter({ subsets: ["latin"] });
+import { ViewTransitions } from 'next-view-transitions'
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,18 +18,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Header />
-          <Providers>{children}</Providers>
-        </ThemeProvider>
-      </body>
-    </html>
+    <ViewTransitions>
+      <html lang="en" suppressHydrationWarning >
+        <body className={inter.className}>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <Header />
+            <Providers>{children}</Providers>
+          </ThemeProvider>
+        </body>
+      </html>
+    </ViewTransitions>
   );
 }

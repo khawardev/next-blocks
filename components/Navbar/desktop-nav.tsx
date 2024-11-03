@@ -1,6 +1,5 @@
 "use client";
 import * as React from "react";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
@@ -13,7 +12,7 @@ import {
 import HeaderNavigationMenu from "./nav-menu";
 import { CommandMenu } from "./command-menu";
 import { LayoutTemplate } from "lucide-react";
-
+import { Link } from 'next-view-transitions'
 export function DesktopNav() {
   const pathname = usePathname();
   return (

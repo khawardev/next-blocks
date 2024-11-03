@@ -1,18 +1,16 @@
 "use client";
-
-import Link from "next/link";
+import { Link } from 'next-view-transitions'
 import { siteConfig } from "@/config/site";
 import { CommandMenu } from "@/components/Navbar/command-menu";
 import { Icons } from "@/components/Navbar/icons";
 import { DesktopNav } from "@/components/Navbar/desktop-nav";
 import { MobileNav } from "@/components/Navbar/mobile-nav";
 import { Button } from "@/components/ui/button";
-import { ModeToggle } from "./ModeToggle";
 import { ThemeSwitcher } from "@/components/ui/theme-switcher";
-
+import Blur from '../Blur';
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <Blur className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className=" flex h-14 container md:px-0 px-4 items-center">
         <DesktopNav />
         <MobileNav />
@@ -28,10 +26,10 @@ export function Header() {
             </Link>
             {/* <ModeToggle /> */}
             <ThemeSwitcher />
-
           </nav>
         </div>
       </div>
-    </header>
+    </Blur>
+
   );
 }
