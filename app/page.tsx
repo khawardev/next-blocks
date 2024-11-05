@@ -1,8 +1,8 @@
 'use client'
 import React from "react";
 import RetroGrid from "@/components/ui/retro-grid";
-import { AllBlocks } from "@/components/AllBlocks/AllBlocks";
-import Hero from "@/components/Home/Hero";
+import { AllBlocks } from "@/components/allBlocks/AllBlocks";
+import Hero from "@/components/home/Hero";
 import AllBlocksData from '@/data/blocks.json'
 
 export default function Home() {

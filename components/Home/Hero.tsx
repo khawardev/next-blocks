@@ -1,11 +1,11 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRightIcon } from "lucide-react";
-import { Icons } from "@/components/Navbar/icons";
+import { Icons } from "@/components/navbar/icons";
 import { Badge } from "../ui/badge";
 import { PageActions, PageHeader, PageHeaderDescription, PageHeaderHeading } from "./page-header";
 import Link from 'next/link'
-import { Blur, BlurDelay, BlurDelay2, BlurDelay3 } from "../Blur";
+import { Blur, BlurDelay, BlurDelay2, BlurDelay3 } from "../blur";
 
 export const Weblink = ({ children, link }: any) => {
   return (

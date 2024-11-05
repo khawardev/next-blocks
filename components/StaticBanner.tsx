@@ -1,4 +1,4 @@
-import { Blur, BlurDelay } from "./Blur"
+import { Blur, BlurDelay } from "./blur"
 import { Badge } from "./ui/badge"
 
 const StaticBanner = ({ title, badge }: { title: string, badge: string }) => {
@@ -9,7 +9,7 @@ const StaticBanner = ({ title, badge }: { title: string, badge: string }) => {
                     <Badge variant='default' >{badge}</Badge>
                 </Blur>
                 <BlurDelay>
-                    <p className='md:text-5xl text-4xl  font-extrabold' >{title}</p>
+                    <h1 className='font-bold' >{title}</h1>
                 </BlurDelay>
             </section>
         </div>

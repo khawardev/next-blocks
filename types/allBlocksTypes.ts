@@ -7,10 +7,13 @@ interface BlockInterface {
   };
   new?: boolean;
   code: string;
-  image: string;
+  image: {
+    url: string;
+    className?: string;
+  };
 }
 
-export interface AllBlocksProps {
+export interface AllBlocksDataProps {
   comp?: string;
   more?: string;
   className?: string;

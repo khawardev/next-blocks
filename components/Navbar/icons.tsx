@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 type IconProps = React.HTMLAttributes<SVGElement>;
 
 export const Icons = {
@@ -127,5 +129,14 @@ export const Icons = {
     >
       <path d="M21 12a9 9 0 1 1-6.219-8.56" />
     </svg>
+  ),
+  bgImage: ({ className }: { className?: string }) => (
+    <Image
+      height={1000}
+      width={1000}
+      className={className}
+      src="https://res.cloudinary.com/denajbnh4/image/upload/v1729011280/Next%20Blocks/ldmflnaug8fsdduzpbug.svg"
+      alt="Bg Image"
+    />
   ),
 };

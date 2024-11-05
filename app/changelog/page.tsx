@@ -1,4 +1,4 @@
-import StaticBanner from '@/components/StaticBanner'
+import StaticBanner from '@/components/staticBanner'
 import React from 'react'
 
 const page = () => {

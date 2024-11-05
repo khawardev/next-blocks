@@ -1,13 +1,13 @@
 "use client";
 import Link from 'next/link'
 import { siteConfig } from "@/config/site";
-import { CommandMenu } from "@/components/Navbar/command-menu";
-import { Icons } from "@/components/Navbar/icons";
-import { DesktopNav } from "@/components/Navbar/desktop-nav";
-import { MobileNav } from "@/components/Navbar/mobile-nav";
+import { CommandMenu } from "@/components/navbar/command-menu";
+import { Icons } from "@/components/navbar/icons";
+import { DesktopNav } from "@/components/navbar/desktop-nav";
+import { MobileNav } from "@/components/navbar/mobile-nav";
 import { Button } from "@/components/ui/button";
 import { ThemeSwitcher } from "@/components/ui/theme-switcher";
-import Blur from '../Blur';
+import Blur from '../blur';
 export function Header() {
   return (
     <Blur className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">

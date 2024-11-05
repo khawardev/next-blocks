@@ -1,4 +1,4 @@
-import { PageActions, PageHeader, PageHeaderDescription, PageHeaderHeading } from "@/components/Home/page-header"
+import { PageActions, PageHeader, PageHeaderDescription, PageHeaderHeading } from "@/components/home/page-header"
 import { Button } from "@/components/ui/button"
 import { Metadata } from "next"
 

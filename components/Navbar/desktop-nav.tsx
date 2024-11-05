@@ -3,7 +3,7 @@ import * as React from "react";
 import { usePathname } from "next/navigation";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
-import { Icons } from "@/components/Navbar/icons";
+import { Icons } from "@/components/navbar/icons";
 import { Button } from "../ui/button";
 import { ThemeSwitcher } from "@/components/ui/theme-switcher";
 import {
