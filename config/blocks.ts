@@ -9,7 +9,7 @@ export const blocksConfig: DocsConfig = {
   mainNav: [
     {
       title: "All Blocks",
-      href: "/all-blocks",
+      href: "/blocks",
     },
     {
       title: "Changelog",
@@ -22,37 +22,37 @@ export const blocksConfig: DocsConfig = {
       items: [
         {
           title: "Hero",
-          href: "/hero",
+          href: "/blocks/hero",
           items: [],
           label: "New",
         },
         {
           title: "Feature",
-          href: "/feature",
+          href: "/blocks/feature",
           items: [],
           label: "New",
         },
         {
           title: "Footer",
-          href: "/footer",
+          href: "/blocks/footer",
           items: [],
           label: "New",
         },
         {
           title: "Header",
-          href: "/header",
+          href: "/blocks/header",
           items: [],
           label: "New",
         },
         {
           title: "Career",
-          href: "/career",
+          href: "/blocks/career",
           items: [],
           label: "New",
         },
         {
           title: "Blog",
-          href: "/blog",
+          href: "/blocks/blog",
           items: [],
           label: "New",
         },

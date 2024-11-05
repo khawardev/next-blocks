@@ -35,16 +35,16 @@ export default function Hero() {
       </BlurDelay2>
       <BlurDelay3>
         <PageActions>
-          <Link href="/docs" >
-            <Button variant="default">
+          <Link href="/blocks" >
+            <Button className=" w-[180px]" variant="default">
               Get Started
             </Button>
           </Link>
-          <Link href="/components" >
+          {/* <Link href="/components" >
             <Button variant="outline">
               Explore Blocks
             </Button>
-          </Link>
+          </Link> */}
         </PageActions>
       </BlurDelay3>
 

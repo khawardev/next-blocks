@@ -28,7 +28,7 @@ interface Block {
   code: string;
 }
 
-export function BlockPreview({ block }: { block: Block }) {
+export function BlockPreview({ block, code }: any) {
   const [isLoading, setIsLoading] = React.useState(true)
   const ref = React.useRef<ImperativePanelHandle>(null)
 
@@ -135,11 +135,17 @@ export function BlockPreview({ block }: { block: Block }) {
         </ResizablePanelGroup>
       </TabsContent>
       <TabsContent value="code">
-        <div
+
+        {block.code}
+
+        {/* <div
           data-rehype-pretty-code-fragment
           dangerouslySetInnerHTML={{ __html: block.code }}
           className="w-full overflow-hidden rounded-md [&_pre]:my-0 [&_pre]:h-[--container-height] [&_pre]:overflow-auto [&_pre]:whitespace-break-spaces [&_pre]:p-6 [&_pre]:font-mono [&_pre]:text-sm [&_pre]:leading-relaxed"
-        />
+        /> */}
+        {/* <div className="w-full overflow-hidden rounded-md [&_pre]:my-0 [&_pre]:h-[--container-height] [&_pre]:overflow-auto [&_pre]:whitespace-break-spaces [&_pre]:p-6 [&_pre]:font-mono [&_pre]:text-sm [&_pre]:leading-relaxed">
+          {code}
+        </div> */}
       </TabsContent>
     </Tabs>
   )

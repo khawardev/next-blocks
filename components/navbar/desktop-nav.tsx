@@ -25,10 +25,10 @@ export function DesktopNav() {
       </Link>
       <div className="flex   items-center gap-4 text-sm lg:gap-6">
         <Link
-          href="/all-blocks"
+          href="/blocks"
           className={cn(
             "transition-colors hover:text-foreground/80",
-            pathname === "/all-blocks" ? "text-foreground" : "text-foreground/60"
+            pathname === "/blocks" ? "text-foreground" : "text-foreground/60"
           )}
         >
           All Blocks
