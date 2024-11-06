@@ -22,8 +22,9 @@ import {
 import { Icons } from "@/components/navbar/icons"
 import { ArrowRightIcon } from "lucide-react"
 import { usePathname } from "next/navigation"
+import Blur, { BlurDelay2, BlurDelay3 } from "@/components/blur"
 
-export function BreadcrumbDemo({ brPage, catLink }: { brPage?: string, catLink?: string }) {
+const BreadcrumbDemo = function ({ brPage, catLink }: { brPage?: string, catLink?: string }) {
   return (
     <Breadcrumb>
       <BreadcrumbList>
@@ -56,12 +57,16 @@ const Page = ({ params }: { params: { categoryblock: string } }) => {
   return (
     <div className=' container-c  '>
       <section className="text-center flex-center space-y-4 flex-col">
-        <Badge variant={'label'}> <Icons.logo className="h-[14px] w-[14px] mr-1 font-bold" />Next Blocks </Badge>
-        <BreadcrumbDemo catLink={categoryName} brPage={block?.name} />
+        <Blur>
+          <Badge variant={'label'}> <Icons.logo className="h-[14px] w-[14px] mr-1 font-bold" />Next Blocks </Badge>
+        </Blur>
+        <BlurDelay2>
+          <BreadcrumbDemo catLink={categoryName} brPage={block?.name} />
+        </BlurDelay2>
       </section>
-      <section className="mt-16">
+      <BlurDelay3 className="mt-16">
         <BlockPreview block={block} />
-      </section>
+      </BlurDelay3>
     </div>
   )
 }
