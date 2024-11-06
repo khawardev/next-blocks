@@ -8,7 +8,14 @@ import { MobileNav } from "@/components/navbar/mobile-nav";
 import { Button } from "@/components/ui/button";
 import { ThemeSwitcher } from "@/components/ui/theme-switcher";
 import Blur from '../blur';
+import { usePathname } from 'next/navigation';
 export function Header() {
+
+  const pathName = usePathname();
+  const hideHeader = /^\/blocks\/[^/]+\/[^/]+\/view$/.test(pathName);
+  if (hideHeader) {
+    return null;
+  }
   return (
     <Blur className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className=" flex h-16 container md:px-0 px-4 items-center">

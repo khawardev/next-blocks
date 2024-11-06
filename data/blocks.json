@@ -2,6 +2,7 @@
   {
     "name": "feature-01",
     "category": "feature",
+    "href": "/blocks/feature/feature-01/view",
     "container": {
       "height": "730px",
       "className": "w-full h-full"
@@ -15,6 +16,7 @@
   {
     "name": "hero-01",
     "category": "hero",
+    "href": "/blocks/hero/hero-01/view",
     "container": {
       "height": "730px",
       "className": "w-full h-full"

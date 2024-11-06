@@ -1,6 +1,7 @@
 interface BlockInterface {
   name: string;
   category: string;
+  href: string;
   container: {
     height: string;
     className: string;

@@ -4,7 +4,7 @@ import { Badge } from "./ui/badge"
 const StaticBanner = ({ title, badge }: { title: string, badge: string }) => {
     return (
         <div className="relative select-none ">
-            <section className=' text-center flex-col space-y-3 '>
+            <section className=' text-center flex-col space-y-4 '>
                 <Blur>
                     <Badge variant='default' >{badge}</Badge>
                 </Blur>

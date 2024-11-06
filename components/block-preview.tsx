@@ -14,6 +14,8 @@ import { Icons } from "./navbar/icons"
 import { BlockCopyCodeButton } from "./blockCopyCodeButton"
 import { ToggleGroup, ToggleGroupItem } from "./ui/toggle-group"
 import Link from "next/link"
+import { BlockViewButton } from "./blockViewButton"
+import BlockViewSkeleton from "@/lib/block-view-skeleton"
 
 interface Block {
   name: string;
@@ -28,7 +30,7 @@ interface Block {
   code: string;
 }
 
-export function BlockPreview({ block, code }: any) {
+export function BlockPreview({ block }: any) {
   const [isLoading, setIsLoading] = React.useState(true)
   const ref = React.useRef<ImperativePanelHandle>(null)
 
@@ -43,23 +45,13 @@ export function BlockPreview({ block, code }: any) {
         } as React.CSSProperties
       }
     >
-      <div className="flex flex-col items-center gap-4 sm:flex-row">
+      <div className="flex-between  items-center gap-4 flex-row">
         <div className="flex items-center gap-2">
-          <TabsList className="hidden h-8 sm:flex">
+          <TabsList className=" md:h-8 h-7 flex">
             <TabsTrigger value="preview">Preview</TabsTrigger>
             <TabsTrigger value="code">Code</TabsTrigger>
           </TabsList>
-          <div className="hidden items-center gap-2 sm:flex">
-            <Separator
-              orientation="vertical"
-              className="mx-2 hidden h-4 md:flex"
-            />
-            <div className="flex items-center gap-2">
-              <Link href={`#${block.name}`}>
-                <Badge variant="outline">{block.name}</Badge>
-              </Link>
-            </div>
-          </div>
+
         </div>
         {block.code && (
           <div className="flex items-center gap-2 pr-[14px] sm:ml-auto">
@@ -93,12 +85,24 @@ export function BlockPreview({ block, code }: any) {
                 </ToggleGroupItem>
               </ToggleGroup>
             </div>
+            <div className="hidden items-center gap-2 sm:flex">
+              <Separator
+                orientation="vertical"
+                className="mx-2 hidden h-4 md:flex"
+              />
+              <div className="flex items-center gap-2">
+                <Link href={`#${block.name}`}>
+                  <Badge >{block.name}</Badge>
+                </Link>
+              </div>
+            </div>
             <Separator
               orientation="vertical"
               className="mx-2 hidden h-4 md:flex"
             />
-            <Separator orientation="vertical" className="mx-2 h-4" />
+
             <BlockCopyCodeButton name={block.name} code={block.code} />
+            <BlockViewButton href={block.href} />
           </div>
         )}
       </div>
@@ -117,12 +121,11 @@ export function BlockPreview({ block, code }: any) {
           >
             {isLoading ? (
               <div className="absolute inset-0 z-10 flex h-[--container-height] w-full items-center justify-center gap-2 text-sm text-muted-foreground">
-                <Icons.spinner className="h-4 w-4 animate-spin" />
-                Loading...
+                <BlockViewSkeleton />
               </div>
             ) : null}
             <iframe
-              src={`/blocks/${block.style}/${block.name}`}
+              src={`/blocks/${block.category}/${block.name}/view`}
               height={block.container?.height}
               className="relative z-20 w-full bg-background"
               onLoad={() => {

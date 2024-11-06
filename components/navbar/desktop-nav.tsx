@@ -82,7 +82,8 @@ const ListItem = React.forwardRef<
       >
         <span className="text-sm w-full flex-between font-medium leading-none flex-center gap-2">
           <span className="flex gap-2">
-            <LayoutTemplate className=" h-4 w-4" />
+            {/* <LayoutTemplate className=" h-4 w-4" /> */}
+            <Icons.logo className="h-4 w-4  text-primary/70" />
             {title}
           </span>
           {index + 1}

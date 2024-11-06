@@ -1,8 +1,17 @@
-import { BlockDisplay } from "@/components/block-display"
-import blocks from "@/data/blocks.json"
+'use client';
+import BlockView from "@/components/block-view";
+import BlockViewSkeleton from "@/lib/block-view-skeleton";
+import { usePathname } from "next/navigation";
+import { Suspense } from "react";
 
-export default async function BlocksPage() {
-  return blocks.map((block, index) => (
-    <BlockDisplay key={`${block.name}-${index}`} block={block} name={block.name} />
-  ))
+export default function Page() {
+  const pathname = usePathname()
+  const blockName = pathname.split("/")[3];
+  return (
+    <>
+      <Suspense fallback={<BlockViewSkeleton />}>
+        <BlockView blockName={blockName} />
+      </Suspense>
+    </>
+  );
 }
