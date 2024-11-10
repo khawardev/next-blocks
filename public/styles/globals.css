@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Noto+Nastaliq+Urdu:wght@400..700&display=swap");
 @import url("./mixins.css");
 @tailwind base;
 @tailwind components;
@@ -10,6 +11,10 @@
   body {
     @apply bg-background text-foreground;
   }
+  code {
+    font-family: "JetBrains Mono", monospace !important;
+  }
+
   .opacity-layer-2 {
     background-color: #f6f4f1;
     opacity: 0.9;

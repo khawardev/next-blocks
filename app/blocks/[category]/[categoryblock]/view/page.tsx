@@ -1,6 +1,6 @@
 'use client';
-import BlockView from "@/components/block-view";
-import BlockViewSkeleton from "@/lib/block-view-skeleton";
+import BlockViewSkeleton from "@/components/block-view-skeleton";
+import BlockView from "@/components/blockview/block-view";
 import { usePathname } from "next/navigation";
 import { Suspense } from "react";
 

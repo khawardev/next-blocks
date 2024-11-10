@@ -1,8 +1,7 @@
-import { AllBlocks } from '@/components/allBlocks/AllBlocks'
+import { AllBlocks } from '@/components/blocks/AllBlocks'
 import StaticBanner from '@/components/staticBanner'
 import React from 'react'
-import AllBlocksData from '@/data/blocks.json'
-import BlurFade from '@/components/ui/blur-fade'
+import { AllBlocksData } from '@/data/blocks'
 
 const page = () => {
     return (

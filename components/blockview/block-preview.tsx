@@ -6,17 +6,17 @@ import {
   Tablet,
 } from "lucide-react"
 import { ImperativePanelHandle } from "react-resizable-panels"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs"
-import { Separator } from "./ui/separator"
-import { Badge } from "./ui/badge"
-import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from "./ui/resizable"
-import { Icons } from "./navbar/icons"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs"
+import { Separator } from "../ui/separator"
+import { Badge } from "../ui/badge"
+import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from "../ui/resizable"
 import { BlockCopyCodeButton } from "./blockCopyCodeButton"
-import { ToggleGroup, ToggleGroupItem } from "./ui/toggle-group"
+import { ToggleGroup, ToggleGroupItem } from "../ui/toggle-group"
 import Link from "next/link"
 import { BlockViewButton } from "./blockViewButton"
-import BlockViewSkeleton from "@/lib/block-view-skeleton"
-
+import BlockViewSkeleton from "@/components/block-view-skeleton"
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism"
 interface Block {
   name: string;
   description: string;
@@ -59,7 +59,7 @@ export function BlockPreview({ block }: any) {
               <ToggleGroup
                 type="single"
                 defaultValue="100"
-                onValueChange={(value) => {
+                onValueChange={(value: any) => {
                   if (ref.current) {
                     ref.current.resize(parseInt(value))
                   }
@@ -137,18 +137,16 @@ export function BlockPreview({ block }: any) {
           <ResizablePanel defaultSize={0} minSize={0} />
         </ResizablePanelGroup>
       </TabsContent>
-      <TabsContent value="code">
+      <TabsContent value="code" className=" overflow-x-auto" >
+        <SyntaxHighlighter
+          language="typescript"
+          style={vscDarkPlus}
+          className='relative  rounded-lg border   bg-background transition-all '
+          customStyle={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '14px', lineHeight: '1.5' }}
+        >
+          {block.code}
+        </SyntaxHighlighter>
 
-        {block.code}
-
-        {/* <div
-          data-rehype-pretty-code-fragment
-          dangerouslySetInnerHTML={{ __html: block.code }}
-          className="w-full overflow-hidden rounded-md [&_pre]:my-0 [&_pre]:h-[--container-height] [&_pre]:overflow-auto [&_pre]:whitespace-break-spaces [&_pre]:p-6 [&_pre]:font-mono [&_pre]:text-sm [&_pre]:leading-relaxed"
-        /> */}
-        {/* <div className="w-full overflow-hidden rounded-md [&_pre]:my-0 [&_pre]:h-[--container-height] [&_pre]:overflow-auto [&_pre]:whitespace-break-spaces [&_pre]:p-6 [&_pre]:font-mono [&_pre]:text-sm [&_pre]:leading-relaxed">
-          {code}
-        </div> */}
       </TabsContent>
     </Tabs>
   )

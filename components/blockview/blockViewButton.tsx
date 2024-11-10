@@ -4,8 +4,8 @@ import * as React from "react"
 import { CheckIcon, ClipboardIcon } from "@radix-ui/react-icons"
 
 import { trackEvent } from "@/lib/events"
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "./ui/tooltip"
-import { Button } from "./ui/button"
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "../ui/tooltip"
+import { Button } from "../ui/button"
 import { ArrowUpRight } from "lucide-react"
 import Link from "next/link"
 

@@ -52,7 +52,7 @@ export function DesktopNav() {
         </div>
         <nav className="flex items-center gap-2">
           <Link href={siteConfig.links.github}>
-            <Button size={'icon'} variant={'ghost'}>
+            <Button className="rounded-lg" size={'icon'} variant={'ghost'}>
               <Icons.gitHub className="h-4 w-4" />
             </Button>
           </Link>

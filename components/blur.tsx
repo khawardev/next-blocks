@@ -33,6 +33,15 @@ export const BlurDelay3 = ({ children, className }: { children: React.ReactNode,
 }
 
 
+export const BlurDelay4 = ({ children, className }: { children: React.ReactNode, className?: string }) => {
+    return (
+        <BlurFade className={className} delay={0.035 * 12} inView>
+            {children}
+        </BlurFade>
+    )
+}
+
+
 
 
 

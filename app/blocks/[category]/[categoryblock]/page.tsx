@@ -1,7 +1,4 @@
-import { BlockPreview } from "@/components/block-preview"
 import { Badge } from "@/components/ui/badge"
-import blocks from "@/data/blocks.json"
-
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -11,7 +8,9 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
 import { Icons } from "@/components/navbar/icons"
-import Blur, { BlurDelay2, BlurDelay3 } from "@/components/blur"
+import Blur, { BlurDelay2, BlurDelay3, BlurDelay4 } from "@/components/blur"
+import { BlockPreview } from "@/components/blockview/block-preview"
+import { AllBlocksData } from "@/data/blocks"
 
 const BreadcrumbDemo = function ({ brPage, catLink }: { brPage?: string, catLink?: string }) {
   return (
@@ -38,7 +37,7 @@ const BreadcrumbDemo = function ({ brPage, catLink }: { brPage?: string, catLink
 }
 
 const Page = ({ params }: { params: { categoryblock: string, category: string } }) => {
-  const block = blocks.find(block => block.name === params.categoryblock)
+  const block = AllBlocksData.find(block => block.name === params.categoryblock)
   return (
     <div className=' container-c  '>
       <section className="text-center flex-center space-y-4 flex-col">
@@ -49,9 +48,9 @@ const Page = ({ params }: { params: { categoryblock: string, category: string } 
           <BreadcrumbDemo catLink={params.category} brPage={block?.name} />
         </BlurDelay2>
       </section>
-      <BlurDelay3 className="mt-16">
+      <BlurDelay4 className="mt-16">
         <BlockPreview block={block} />
-      </BlurDelay3>
+      </BlurDelay4>
     </div>
   )
 }
