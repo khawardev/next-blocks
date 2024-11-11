@@ -19,7 +19,7 @@ export function BlockViewButton({
         <TooltipProvider>
             <Tooltip>
                 <TooltipTrigger asChild>
-                    <Link target="_blank" href={href}>
+                    <Link href={href}>
                         <Button
                             size="icon"
                             variant="outline"

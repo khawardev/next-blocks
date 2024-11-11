@@ -29,7 +29,7 @@ export const AllBlocks = ({ comp, more, className, AllBlocksData }: AllBlocksDat
                                 {block.new && <Badge className='absolute md:top-5 top-7 right-6 md:right-5' variant='label'>new</Badge>}
                                 <Image
                                     height={1000}
-                                    className={cn(block.image.className, "md:h-[280px] shadow-xl")}
+                                    className={cn(block.image.className, " shadow-xl")}
                                     width={1000}
                                     src={block.image.url}
                                     alt={block.name}

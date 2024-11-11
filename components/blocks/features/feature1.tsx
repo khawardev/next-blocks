@@ -1,7 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
 export const Feature01 = () => (
-    <div className="container-c">
+    <div className="container-c h-screen flex-center">
         <section className='md-flex-between space-y10  gap-28 md:mx-28'>
             <div className=' w-full'>
                 <Image height={1000} className='  h-[300px]  object-cover aspect-video rounded-lg w-full' width={1000} src={'https://res.cloudinary.com/denajbnh4/image/upload/v1729011280/Next%20Blocks/ldmflnaug8fsdduzpbug.svg'} alt={'name'} />

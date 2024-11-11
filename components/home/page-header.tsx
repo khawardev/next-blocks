@@ -9,7 +9,7 @@ function PageHeader({
   return (
     <section
       className={cn(
-        "container-c md:py-48 py-36     flex-center  space-y-4  text-center   flex-col  ",
+        "container-c md:py-48 py-40     flex-center  space-y-4  text-center   flex-col  ",
         className
       )}
       {...props}

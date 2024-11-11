@@ -9,7 +9,7 @@ const StaticBanner = ({ title, badge }: { title: string, badge: string }) => {
                     <Badge variant='label' >{badge}</Badge>
                 </Blur>
                 <BlurDelay>
-                    <h1 className='font-bold' >{title}</h1>
+                    <h1 className='font-bold tracking-tighter ' >{title}</h1>
                 </BlurDelay>
             </section>
         </div>

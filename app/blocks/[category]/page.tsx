@@ -1,7 +1,6 @@
 import { AllBlocks } from "@/components/blocks/AllBlocks";
 import StaticBanner from "@/components/staticBanner"
 import { AllBlocksData } from "@/data/blocks";
-
 const page = async ({ params }: any) => {
   const { category } = await params;
   const byCategoryBlocks = AllBlocksData.filter(block => block.category === category);

@@ -13,6 +13,7 @@ import HeaderNavigationMenu from "./nav-menu";
 import { CommandMenu } from "./command-menu";
 import { LayoutTemplate } from "lucide-react";
 import Link from 'next/link'
+import { countObjectsByCategory } from "@/data/blocks";
 export function DesktopNav() {
   const pathname = usePathname();
   return (
@@ -86,7 +87,7 @@ const ListItem = React.forwardRef<
             <Icons.logo className="h-4 w-4  text-primary/70" />
             {title}
           </span>
-          {index + 1}
+          {countObjectsByCategory(title.toLowerCase())}
         </span>
       </Link>
     </NavigationMenuLink>
