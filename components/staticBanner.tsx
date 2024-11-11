@@ -6,7 +6,7 @@ const StaticBanner = ({ title, badge }: { title: string, badge: string }) => {
         <div className="relative select-none ">
             <section className=' text-center flex-col space-y-4 '>
                 <Blur>
-                    <Badge variant='default' >{badge}</Badge>
+                    <Badge variant='label' >{badge}</Badge>
                 </Blur>
                 <BlurDelay>
                     <h1 className='font-bold' >{title}</h1>

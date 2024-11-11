@@ -36,8 +36,8 @@ const BreadcrumbDemo = function ({ brPage, catLink }: { brPage?: string, catLink
   )
 }
 
-const Page = ({ params }: { params: { categoryblock: string, category: string } }) => {
-  const block = AllBlocksData.find(block => block.name === params.categoryblock)
+const Page = (params: { categoryblock: string, category: string }) => {
+  const block = AllBlocksData.find(block => block.name === params?.categoryblock)
   return (
     <div className=' container-c  '>
       <section className="text-center flex-center space-y-4 flex-col">
