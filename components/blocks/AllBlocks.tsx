@@ -26,7 +26,7 @@ export const AllBlocks = ({ comp, more, className, AllBlocksData }: AllBlocksDat
                         <Link href={`/blocks/${block.category}/${block.name}`}>
                             <Card
                                 className='hover:cursor-pointer relative hover:bg-muted/50 hover:border-primary/25'>
-                                {block.new && <Badge className='absolute top-5 right-5' variant='label'>new</Badge>}
+                                {block.new && <Badge className='absolute md:top-5 top-7 right-6 md:right-5' variant='label'>new</Badge>}
                                 <Image
                                     height={1000}
                                     className={cn(block.image.className, "md:h-[280px] shadow-xl")}

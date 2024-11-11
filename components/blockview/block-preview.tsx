@@ -17,6 +17,7 @@ import { BlockViewButton } from "./blockViewButton"
 import BlockViewSkeleton from "@/components/block-view-skeleton"
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism"
+import { BlurDelay } from "../blur"
 interface Block {
   name: string;
   description: string;
@@ -138,15 +139,16 @@ export function BlockPreview({ block }: any) {
         </ResizablePanelGroup>
       </TabsContent>
       <TabsContent value="code" className=" overflow-x-auto" >
-        <SyntaxHighlighter
-          language="typescript"
-          style={vscDarkPlus}
-          className='relative  rounded-lg border   bg-background transition-all '
-          customStyle={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '14px', lineHeight: '1.5' }}
-        >
-          {block.code}
-        </SyntaxHighlighter>
-
+        <BlurDelay>
+          <SyntaxHighlighter
+            language="typescript"
+            style={vscDarkPlus}
+            className='relative  rounded-lg border   bg-background transition-all '
+            customStyle={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '14px', lineHeight: '1.5' }}
+          >
+            {block.code}
+          </SyntaxHighlighter>
+        </BlurDelay>
       </TabsContent>
     </Tabs>
   )
