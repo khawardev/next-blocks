@@ -36,8 +36,9 @@ const BreadcrumbDemo = function ({ brPage, catLink }: { brPage?: string, catLink
   )
 }
 
-const Page = (params: { categoryblock: string, category: string }) => {
-  const block = AllBlocksData.find(block => block.name === params?.categoryblock)
+const Page = async ({ params }: any) => {
+  const { categoryblock, category } = await params;
+  const block = AllBlocksData.find(block => block.name === categoryblock);
   return (
     <div className=' container-c  '>
       <section className="text-center flex-center space-y-4 flex-col">
@@ -45,7 +46,7 @@ const Page = (params: { categoryblock: string, category: string }) => {
           <Badge variant={'label'}> <Icons.logo className="h-[14px] w-[14px] mr-1 font-bold" />Next Blocks </Badge>
         </Blur>
         <BlurDelay2>
-          <BreadcrumbDemo catLink={params.category} brPage={block?.name} />
+          <BreadcrumbDemo catLink={category} brPage={block?.name} />
         </BlurDelay2>
       </section>
       <BlurDelay4 className="mt-16">
