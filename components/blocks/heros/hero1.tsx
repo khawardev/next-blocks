@@ -39,7 +39,7 @@ const Hero01 = () => {
                     <div className="grid items-center grid-cols-1 gap-12 lg:grid-cols-2">
                         <div>
                             <p className="text-base font-bold tracking-wider text-blue-600 uppercase ">A social media for learners</p>
-                            <h1 className="mt-4 text-4xl font-extrabold text-black tracking-tight  lg:mt-8 sm:text-6xl xl:text-8xl">Connect & learn from the experts</h1>
+                            <h1 className="mt-4 text-4xl md:font-bold font-extrabold text-black tracking-tighter  lg:mt-8 sm:text-6xl xl:text-8xl">Connect & learn from the experts</h1>
                             <p className="mt-4 text-base text-black lg:mt-8 sm:text-xl">Grow your career fast with right mentor.</p>
                             <a href="#" title="" className="inline-flex items-center md:px-6 px-5 py-3 md:py-4 mt-8 font-semibold text-black transition-all duration-200 bg-yellow-300 rounded-full lg:mt-16 hover:bg-yellow-400 focus:bg-yellow-400" role="button">
                                 Join for free
