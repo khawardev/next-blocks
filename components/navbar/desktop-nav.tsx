@@ -17,7 +17,7 @@ import { countObjectsByCategory } from "@/data/blocks";
 export function DesktopNav() {
   const pathname = usePathname();
   return (
-    <div className="md:flex hidden w-full justify-between  items-center  ">
+    <div className="md:flex  hidden w-full justify-between  items-center  ">
       <Link href="/" className="mr-6   flex items-center space-x-2">
         <Icons.logo className="h-5 w-5" />
         <span className="hidden font-extrabold sm:inline-block">
@@ -45,6 +45,17 @@ export function DesktopNav() {
           )}
         >
           Changelog
+        </Link>
+        <Link
+          href="/docs"
+          className={cn(
+            "transition-colors hover:text-foreground/80",
+            pathname?.startsWith("/docs")
+              ? "text-foreground"
+              : "text-foreground/60"
+          )}
+        >
+          Documentation
         </Link>
       </div>
       <div className="flex  items-center justify-between space-x-2 ">

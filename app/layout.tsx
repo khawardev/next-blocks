@@ -4,6 +4,8 @@ import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Header } from "@/components/navbar/Header";
 import Providers from "@/components/progressBarProvider";
+import { RootProvider } from 'fumadocs-ui/provider';
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -17,20 +19,29 @@ export default function BlockLayout({
   children: React.ReactNode;
 }>) {
   return (
+
     <html lang="en" suppressHydrationWarning >
-      <body className={inter.className}>
+      <body className={inter.className} style={{
+        // display: 'flex',
+        // flexDirection: 'column',
+        // minHeight: '100vh',
+      }
+      } >
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
-          <Header />
-          <Providers>
-            {children}
-          </Providers>
+          <RootProvider>
+            <Header />
+            <Providers>
+              {children}
+            </Providers>
+          </RootProvider>
         </ThemeProvider>
       </body>
     </html>
   );
 }
+
