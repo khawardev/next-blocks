@@ -15,6 +15,10 @@ export const blocksConfig: DocsConfig = {
       title: "Changelog",
       href: "/changelog",
     },
+    {
+      title: "Documentation",
+      href: "/docs",
+    },
   ],
   sidebarNav: [
     {
@@ -30,31 +34,26 @@ export const blocksConfig: DocsConfig = {
           title: "Feature",
           href: "/blocks/feature",
           items: [],
-          label: "New",
         },
         {
           title: "Footer",
           href: "/blocks/footer",
           items: [],
-          label: "New",
         },
         {
           title: "Header",
           href: "/blocks/header",
           items: [],
-          label: "New",
         },
         {
           title: "Career",
           href: "/blocks/career",
           items: [],
-          label: "New",
         },
         {
           title: "Blog",
           href: "/blocks/blog",
           items: [],
-          label: "New",
         },
       ],
     },
