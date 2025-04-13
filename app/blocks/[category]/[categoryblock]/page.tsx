@@ -43,7 +43,7 @@ const Page = async ({ params }: any) => {
     <div className=' container-c  '>
       <section className="text-center flex-center space-y-4 flex-col">
         <Blur>
-          <Badge variant={'label'}> <Icons.logo className="h-[14px] w-[14px] mr-1 font-bold" />Next Blocks </Badge>
+          <Badge variant={'label'}> <Icons.logo className="h-[14px] w-[14px] mr-1 font-bold" />Next Blocks</Badge>
         </Blur>
         <BlurDelay2>
           <BreadcrumbDemo catLink={category} brPage={block?.name} />

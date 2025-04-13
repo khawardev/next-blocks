@@ -14,17 +14,27 @@ import { CommandMenu } from "./command-menu";
 import { LayoutTemplate } from "lucide-react";
 import Link from 'next/link'
 import { countObjectsByCategory } from "@/data/blocks";
+import Image from "next/image";
 export function DesktopNav() {
   const pathname = usePathname();
   return (
     <div className="md:flex  hidden w-full justify-between  items-center  ">
-      <Link href="/" className="mr-6   flex items-center space-x-2">
-        <Icons.logo className="h-5 w-5" />
+      <Link href="/" className="mr-6 flex items-center space-x-1">
+        <p className=""><Icons.logo theme="light" className="w-4 h-4" /></p>
         <span className="hidden font-extrabold sm:inline-block">
           {siteConfig.name}
         </span>
       </Link>
       <div className="flex   items-center gap-4 text-sm lg:gap-6">
+        <Link
+          href="/"
+          className={cn(
+            "transition-colors hover:text-foreground/80",
+            pathname === "/" ? "text-foreground" : "text-foreground/60"
+          )}
+        >
+          Home
+        </Link>
         <Link
           href="/blocks"
           className={cn(
@@ -35,7 +45,7 @@ export function DesktopNav() {
           All Blocks
         </Link>
         <HeaderNavigationMenu />
-        <Link
+        {/* <Link
           href="/changelog"
           className={cn(
             "transition-colors hover:text-foreground/80",
@@ -56,13 +66,18 @@ export function DesktopNav() {
           )}
         >
           Documentation
-        </Link>
+        </Link> */}
       </div>
-      <div className="flex  items-center justify-between space-x-2 ">
+      <div className="flex items-center justify-between space-x-2 ">
         <div className="w-full flex-1 md:w-auto md:flex-none">
           <CommandMenu />
         </div>
         <nav className="flex items-center gap-2">
+          <Link href={siteConfig.links.developer}>
+            <Button className="rounded-lg mt-1" size={'icon'} variant={'ghost'}>
+              <Image src={'https://attic.sh/r44qhgzfghw52b64th6ixln2hfbx'} alt='s' width={25} height={25} />
+            </Button>
+          </Link>
           <Link href={siteConfig.links.github}>
             <Button className="rounded-lg" size={'icon'} variant={'ghost'}>
               <Icons.gitHub className="h-4 w-4" />
@@ -94,8 +109,7 @@ const ListItem = React.forwardRef<
       >
         <span className="text-sm w-full flex-between font-medium leading-none flex-center gap-2">
           <span className="flex gap-2">
-            {/* <LayoutTemplate className=" h-4 w-4" /> */}
-            <Icons.logo className="h-4 w-4  text-primary/70" />
+            <Icons.logo2 className="h-4 w-4  text-primary/70" />
             {title}
           </span>
           {countObjectsByCategory(title.toLowerCase())}

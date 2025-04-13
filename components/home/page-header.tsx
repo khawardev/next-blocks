@@ -9,7 +9,7 @@ function PageHeader({
   return (
     <section
       className={cn(
-        "container-c md:py-48 py-40     flex-center  space-y-4  text-center   flex-col  ",
+        "container-c md:py-48 py-24     flex-center  space-y-4  text-center   flex-col  ",
         className
       )}
       {...props}
@@ -26,7 +26,7 @@ function PageHeaderHeading({
   return (
     <h1
       className={cn(
-        "text-3xl font-extrabold leading-tight tracking-tight md:text-6xl lg:leading-[1.1]",
+        "text-3xl    bg-clip-text font-extrabold leading-tight tracking-tight md:text-6xl lg:leading-[1.1]",
         className
       )}
       {...props}

@@ -8,9 +8,10 @@ const Card = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <div
     ref={ref}
-    // border-border ring-1 ring-offset-4 ring-border ring-offset-background
+    // group relative inset-ring inset-ring-zinc-200 inset-shadow-xs inset-shadow-zinc-200 flex h-full w-full flex-col rounded-lg bg-overlay p-4 shadow-xs **:data-[slot=card-footer]:px-0 **:data-[slot=card-header]:px-0 lg:p-8 dark:inset-ring-zinc-500/10 dark:inset-shadow-zinc-800
+    //   bg-muted   transition-all  ease-linear text-card-foreground  md:p-2  md:rounded-xl rounded-lg  shadow-sm w-full  border
     className={cn(
-      "  bg-muted  transition-all  ease-linear text-card-foreground  md:p-2  md:rounded-xl rounded-lg  shadow-sm w-full  border",
+      " bg-muted inset-ring  inset-shadow-xs text-card-foreground shadow-sm transition-all  ease-linear   md:p-2  md:rounded-xl rounded-lg   w-full   border",
       className
     )}
     {...props}

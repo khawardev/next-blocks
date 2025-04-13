@@ -1,6 +1,9 @@
-import Image from "next/image";
 
+
+import { Zap } from "lucide-react";
+import Image from "next/image";
 type IconProps = React.HTMLAttributes<SVGElement>;
+import { BiSolidZap } from "react-icons/bi";
 
 export const Icons = {
   hamburger: (props: IconProps) => (
@@ -8,7 +11,10 @@ export const Icons = {
       <path fill="currentColor" d="M32 288c-17.7 0-32 14.3-32 32s14.3 32 32 32h384c17.7 0 32-14.3 32-32s-14.3-32-32-32zm0-128c-17.7 0-32 14.3-32 32s14.3 32 32 32h384c17.7 0 32-14.3 32-32s-14.3-32-32-32z" />
     </svg>
   ),
-  logo: (props: IconProps) => (
+  logo: ({ className, theme }: any) => (
+    <BiSolidZap className={className} size={14} strokeWidth={2} aria-hidden="true" />
+  ),
+  logo2: ({ props }: any) => (
     <svg {...props} xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 512 512">
       <path fill="currentColor" d="M48 170v196.92L240 480V284zm224 310l192-113.08V170L272 284Zm176-336L256 32L64 144l192 112z"></path>
     </svg>

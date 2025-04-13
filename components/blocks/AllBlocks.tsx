@@ -3,7 +3,7 @@ import React from 'react'
 import { Card } from '../ui/card'
 import Image from 'next/image'
 import { Badge } from '../ui/badge'
-import { ArrowUpRight } from 'lucide-react'
+import { ArrowUpRight, Zap } from 'lucide-react'
 import { AllBlocksDataProps } from '@/types/allBlocksTypes';
 import BlurFade from '../ui/blur-fade'
 import Link from 'next/link'
@@ -19,9 +19,13 @@ export const AllBlocks = ({ comp, more, className, AllBlocksData }: AllBlocksDat
     return (
         <main className='container-col'>
             {comp &&
-                <BlurDelay2 className=' flex-between'>
-                    <h3>{comp}</h3>
-                    <Link href={'/blocks'}><Badge className=' px-1.5' variant={'label'}>{more} <ArrowUpRight className='ml-1' size={13} /></Badge></Link>
+                <BlurDelay2 className=' flex flex-row-reverse'>
+                    {/* <h3>{comp}</h3> */}
+                    <Link href={'/blocks'}><Badge className=' px-1.5' variant={'label'}>
+                        {more}
+                        <Zap className="-ms-0.5 ml-1 opacity-60" size={12} strokeWidth={2} aria-hidden="true" />
+                    </Badge>
+                    </Link>
                 </BlurDelay2>
             }
             <Masonry
