@@ -46,8 +46,8 @@ export const blocksConfig: DocsConfig = {
           items: [],
         },
         {
-          title: "Career",
-          href: "/blocks/career",
+          title: "Faq",
+          href: "/blocks/faq",
           items: [],
         },
         {

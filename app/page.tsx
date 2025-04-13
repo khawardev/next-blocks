@@ -11,7 +11,6 @@ export default function Home() {
         <RetroGrid />
         <Hero />
         <div className="opacity-layer"></div>
-        {/* <OrbEffect /> */}
       </section>
       <AllBlocks AllBlocksData={AllBlocksData} className={'grid grid-cols-1 md:grid-cols-2 gap-8'} comp={'New Components'} more={'more'} />
     </main>
